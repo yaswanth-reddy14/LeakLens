@@ -4,7 +4,7 @@
 
 The browser uploads hourly water consumption. FastAPI validates every row, merges it atomically into storage, and calls ordinary Python functions for the detector and maintenance workflow. Each building is compared with its own past at the same overnight hours. An alert explains the arithmetic. The supervisor records an investigation and repair. Later readings are compared against clean pre-incident history, with coverage shown explicitly.
 
-React handles the dashboard; SQLite makes local use simple. AWS SAM packages the same API for Python Lambda. Mangum translates API Gateway events to FastAPI requests. A DynamoDB adapter is prepared for hosted use, while a separate SAM local configuration exercises the Lambda handler with temporary SQLite. Cloud deployment is not verified.
+React handles the dashboard; SQLite makes local use simple. AWS SAM packages the same API for Python Lambda. Mangum translates API Gateway events to FastAPI requests. The hosted Lambda uses the DynamoDB adapter, while a separate SAM local configuration exercises the handler with temporary SQLite. The Amplify frontend and AWS backend are deployed and the simulated workflow was verified in real browsers. GitHub pushes do not trigger deployment; Amplify uses manual artifacts.
 
 ## Ten likely technical questions
 

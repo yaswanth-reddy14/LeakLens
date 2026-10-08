@@ -1,6 +1,6 @@
 # Verification record
 
-Executed in this Windows workspace on 8 October 2026. This file distinguishes local tests, earlier preparation, and subsequently authorized real AWS deployment. Billable backend and Amplify resources were created under explicit authorization. No interactive login was initiated, no credentials were printed and no GitHub push occurred. The latest live-hosting evidence is recorded below.
+Executed in this Windows workspace on 8 October 2026. This file distinguishes local tests, earlier preparation, and subsequently authorized real AWS deployment. Billable backend and Amplify resources were created under explicit authorization. No interactive login was initiated and no credentials were printed. The authorized GitHub publication is confirmed in the final section below; earlier no-push statements describe their historical checkpoints.
 
 | Check                        | Command / method                                                                                                                | Result                                                                 |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -146,3 +146,11 @@ Amplify app `d2gicx0vj4suvu`, branch `demo`, still uses manual artifact deployme
 README and SUBMISSION now contain both confirmed URLs; the video remains explicitly pending. Earlier no-Git/no-push statements above describe historical checkpoints. Push confirmation is recorded after successful publication below. Remaining event eligibility, truthful build timeline, participant details, video, final form submission, budget setup and previously disclosed verification limits remain the user's manual tasks.
 
 Staged-blob review accounted for Git's CRLF-to-LF normalization in eight text files. The only such file included in the deployed Python package is `backend/evaluate.py`; its staged content matches the deployed file after newline normalization. All other backend Python files and runtime manifests match exactly. This formatting-only difference requires no deployment update. The exact staged list contains 78 intended files, with no excluded paths or credential-pattern findings; `git diff --cached --check` passed.
+
+### GitHub publication confirmed
+
+The reviewed source commit [`2da7aa54e7d04cf935b1c2de8a38f118d0399f66`](https://github.com/yaswanth-reddy14/LeakLens/commit/2da7aa54e7d04cf935b1c2de8a38f118d0399f66), `Publish LeakLens with verified local and AWS workflows`, was pushed successfully to `origin/main` using existing Git Credential Manager authentication. `git ls-remote origin refs/heads/main` matched the local commit exactly; no force push was used. Anonymous GitHub API access returned HTTP 200 and confirmed a public repository with default branch `main`.
+
+This documentation follow-up records the push and updates older narration/interview wording to reflect the already verified live deployment. It changes no application or infrastructure code and requires no redeployment. The final branch tip is reported after this follow-up is pushed and independently checked; `git rev-parse HEAD` identifies it in a checkout.
+
+GitHub source and hosted demo links are now confirmed. The remaining publication task is the **video URL**, followed by participant/eligibility/build-timeline details and the actual event submission. Amplify remains manually deployed with no GitHub connection or automatic builds.
