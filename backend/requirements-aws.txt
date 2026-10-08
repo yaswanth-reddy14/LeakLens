@@ -1,0 +1,3 @@
+-r requirements-runtime.txt
+boto3==1.43.109
+mangum==0.22.0

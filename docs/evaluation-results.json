@@ -1,0 +1,2228 @@
+{
+  "version": 1,
+  "fixed_threshold_liters_per_hour": 100,
+  "tuning_scenarios": 40,
+  "tuning_candidates": {
+    "100": {
+      "scenarios": 40,
+      "TP": 14,
+      "FP": 10,
+      "TN": 10,
+      "FN": 6,
+      "precision": 0.5833333333333334,
+      "recall": 0.7,
+      "f1": 0.6363636363636364,
+      "mean_delay_hours": 5.0,
+      "delay_samples": 8,
+      "incomplete_or_insufficient": 8
+    },
+    "150": {
+      "scenarios": 40,
+      "TP": 10,
+      "FP": 5,
+      "TN": 15,
+      "FN": 10,
+      "precision": 0.6666666666666666,
+      "recall": 0.5,
+      "f1": 0.5714285714285714,
+      "mean_delay_hours": 5.0,
+      "delay_samples": 8,
+      "incomplete_or_insufficient": 8
+    },
+    "200": {
+      "scenarios": 40,
+      "TP": 8,
+      "FP": 4,
+      "TN": 16,
+      "FN": 12,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "mean_delay_hours": 5.0,
+      "delay_samples": 8,
+      "incomplete_or_insufficient": 8
+    },
+    "250": {
+      "scenarios": 40,
+      "TP": 5,
+      "FP": 2,
+      "TN": 18,
+      "FN": 15,
+      "precision": 0.7142857142857143,
+      "recall": 0.25,
+      "f1": 0.37037037037037035,
+      "mean_delay_hours": 5.0,
+      "delay_samples": 5,
+      "incomplete_or_insufficient": 8
+    }
+  },
+  "evaluation_scenarios": 100,
+  "historical": {
+    "summary": {
+      "scenarios": 100,
+      "TP": 20,
+      "FP": 10,
+      "TN": 40,
+      "FN": 30,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "f1": 0.5,
+      "mean_delay_hours": 5.0,
+      "delay_samples": 20,
+      "incomplete_or_insufficient": 20
+    },
+    "families": {
+      "normal_morning_peak": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 0,
+        "TN": 20,
+        "FN": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 0
+      },
+      "sustained_overnight_increase": {
+        "scenarios": 20,
+        "TP": 20,
+        "FP": 0,
+        "TN": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mean_delay_hours": 5.0,
+        "delay_samples": 20,
+        "incomplete_or_insufficient": 0
+      },
+      "gradual_small_increase": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 0,
+        "TN": 0,
+        "FN": 20,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 0
+      },
+      "missing_readings": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 0,
+        "TN": 10,
+        "FN": 10,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 20
+      },
+      "legitimate_overnight_consumption": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 10,
+        "TN": 10,
+        "FN": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 0
+      }
+    },
+    "records": [
+      {
+        "id": "evaluation-normal_morning_peak-00",
+        "seed": 9200,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-01",
+        "seed": 9201,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-02",
+        "seed": 9202,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-03",
+        "seed": 9203,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-04",
+        "seed": 9204,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-05",
+        "seed": 9205,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-06",
+        "seed": 9206,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-07",
+        "seed": 9207,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-08",
+        "seed": 9208,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-09",
+        "seed": 9209,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-10",
+        "seed": 9210,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-11",
+        "seed": 9211,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-12",
+        "seed": 9212,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-13",
+        "seed": 9213,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-14",
+        "seed": 9214,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-15",
+        "seed": 9215,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-16",
+        "seed": 9216,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-17",
+        "seed": 9217,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-18",
+        "seed": 9218,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-19",
+        "seed": 9219,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-00",
+        "seed": 9300,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-01",
+        "seed": 9301,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-02",
+        "seed": 9302,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-03",
+        "seed": 9303,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-04",
+        "seed": 9304,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-05",
+        "seed": 9305,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-06",
+        "seed": 9306,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-07",
+        "seed": 9307,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-08",
+        "seed": 9308,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-09",
+        "seed": 9309,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-10",
+        "seed": 9310,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-11",
+        "seed": 9311,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-12",
+        "seed": 9312,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-13",
+        "seed": 9313,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-14",
+        "seed": 9314,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-15",
+        "seed": 9315,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-16",
+        "seed": 9316,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-17",
+        "seed": 9317,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-18",
+        "seed": 9318,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-19",
+        "seed": 9319,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-00",
+        "seed": 9400,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-01",
+        "seed": 9401,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-02",
+        "seed": 9402,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-03",
+        "seed": 9403,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-04",
+        "seed": 9404,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-05",
+        "seed": 9405,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-06",
+        "seed": 9406,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-07",
+        "seed": 9407,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-08",
+        "seed": 9408,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-09",
+        "seed": 9409,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-10",
+        "seed": 9410,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-11",
+        "seed": 9411,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-12",
+        "seed": 9412,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-13",
+        "seed": 9413,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-14",
+        "seed": 9414,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-15",
+        "seed": 9415,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-16",
+        "seed": 9416,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-17",
+        "seed": 9417,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-18",
+        "seed": 9418,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-19",
+        "seed": 9419,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-00",
+        "seed": 9500,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-01",
+        "seed": 9501,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-02",
+        "seed": 9502,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-03",
+        "seed": 9503,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-04",
+        "seed": 9504,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-05",
+        "seed": 9505,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-06",
+        "seed": 9506,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-07",
+        "seed": 9507,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-08",
+        "seed": 9508,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-09",
+        "seed": 9509,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-10",
+        "seed": 9510,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-11",
+        "seed": 9511,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-12",
+        "seed": 9512,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-13",
+        "seed": 9513,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-14",
+        "seed": 9514,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-15",
+        "seed": 9515,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-16",
+        "seed": 9516,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-17",
+        "seed": 9517,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-18",
+        "seed": 9518,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-19",
+        "seed": 9519,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-00",
+        "seed": 9600,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-01",
+        "seed": 9601,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-02",
+        "seed": 9602,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-03",
+        "seed": 9603,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-04",
+        "seed": 9604,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-05",
+        "seed": 9605,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-06",
+        "seed": 9606,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-07",
+        "seed": 9607,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-08",
+        "seed": 9608,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-09",
+        "seed": 9609,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-10",
+        "seed": 9610,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-11",
+        "seed": 9611,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-12",
+        "seed": 9612,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-13",
+        "seed": 9613,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-14",
+        "seed": 9614,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-15",
+        "seed": 9615,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-16",
+        "seed": 9616,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-17",
+        "seed": 9617,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-18",
+        "seed": 9618,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-19",
+        "seed": 9619,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      }
+    ]
+  },
+  "fixed": {
+    "summary": {
+      "scenarios": 100,
+      "TP": 35,
+      "FP": 25,
+      "TN": 25,
+      "FN": 15,
+      "precision": 0.5833333333333334,
+      "recall": 0.7,
+      "f1": 0.6363636363636364,
+      "mean_delay_hours": 5.0,
+      "delay_samples": 20,
+      "incomplete_or_insufficient": 20
+    },
+    "families": {
+      "normal_morning_peak": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 10,
+        "TN": 10,
+        "FN": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 0
+      },
+      "sustained_overnight_increase": {
+        "scenarios": 20,
+        "TP": 20,
+        "FP": 0,
+        "TN": 0,
+        "FN": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "mean_delay_hours": 5.0,
+        "delay_samples": 20,
+        "incomplete_or_insufficient": 0
+      },
+      "gradual_small_increase": {
+        "scenarios": 20,
+        "TP": 15,
+        "FP": 0,
+        "TN": 0,
+        "FN": 5,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571428571428571,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 0
+      },
+      "missing_readings": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 0,
+        "TN": 10,
+        "FN": 10,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 20
+      },
+      "legitimate_overnight_consumption": {
+        "scenarios": 20,
+        "TP": 0,
+        "FP": 15,
+        "TN": 5,
+        "FN": 0,
+        "precision": 0.0,
+        "recall": null,
+        "f1": 0.0,
+        "mean_delay_hours": null,
+        "delay_samples": 0,
+        "incomplete_or_insufficient": 0
+      }
+    },
+    "records": [
+      {
+        "id": "evaluation-normal_morning_peak-00",
+        "seed": 9200,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-01",
+        "seed": 9201,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-02",
+        "seed": 9202,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-03",
+        "seed": 9203,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-04",
+        "seed": 9204,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-05",
+        "seed": 9205,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-06",
+        "seed": 9206,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-07",
+        "seed": 9207,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-08",
+        "seed": 9208,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-09",
+        "seed": 9209,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-10",
+        "seed": 9210,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-11",
+        "seed": 9211,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-12",
+        "seed": 9212,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-13",
+        "seed": 9213,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-14",
+        "seed": 9214,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-15",
+        "seed": 9215,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-16",
+        "seed": 9216,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-17",
+        "seed": 9217,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-18",
+        "seed": 9218,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-normal_morning_peak-19",
+        "seed": 9219,
+        "family": "normal_morning_peak",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-00",
+        "seed": 9300,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-01",
+        "seed": 9301,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-02",
+        "seed": 9302,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-03",
+        "seed": 9303,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-04",
+        "seed": 9304,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-05",
+        "seed": 9305,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-06",
+        "seed": 9306,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-07",
+        "seed": 9307,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-08",
+        "seed": 9308,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-09",
+        "seed": 9309,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-10",
+        "seed": 9310,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-11",
+        "seed": 9311,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-12",
+        "seed": 9312,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-13",
+        "seed": 9313,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-14",
+        "seed": 9314,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-15",
+        "seed": 9315,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-16",
+        "seed": 9316,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-17",
+        "seed": 9317,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-18",
+        "seed": 9318,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-sustained_overnight_increase-19",
+        "seed": 9319,
+        "family": "sustained_overnight_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": 5.0,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-00",
+        "seed": 9400,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-01",
+        "seed": 9401,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-02",
+        "seed": 9402,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-03",
+        "seed": 9403,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-04",
+        "seed": 9404,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-05",
+        "seed": 9405,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-06",
+        "seed": 9406,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-07",
+        "seed": 9407,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-08",
+        "seed": 9408,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-09",
+        "seed": 9409,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-10",
+        "seed": 9410,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-11",
+        "seed": 9411,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-12",
+        "seed": 9412,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-13",
+        "seed": 9413,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-14",
+        "seed": 9414,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-15",
+        "seed": 9415,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-16",
+        "seed": 9416,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "FN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-17",
+        "seed": 9417,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-18",
+        "seed": 9418,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-gradual_small_increase-19",
+        "seed": 9419,
+        "family": "gradual_small_increase",
+        "positive": true,
+        "outcome": "TP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-00",
+        "seed": 9500,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-01",
+        "seed": 9501,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-02",
+        "seed": 9502,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-03",
+        "seed": 9503,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-04",
+        "seed": 9504,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-05",
+        "seed": 9505,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-06",
+        "seed": 9506,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-07",
+        "seed": 9507,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-08",
+        "seed": 9508,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-09",
+        "seed": 9509,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-10",
+        "seed": 9510,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-11",
+        "seed": 9511,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-12",
+        "seed": 9512,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-13",
+        "seed": 9513,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-14",
+        "seed": 9514,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-15",
+        "seed": 9515,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-16",
+        "seed": 9516,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-17",
+        "seed": 9517,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-18",
+        "seed": 9518,
+        "family": "missing_readings",
+        "positive": true,
+        "outcome": "FN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-missing_readings-19",
+        "seed": 9519,
+        "family": "missing_readings",
+        "positive": false,
+        "outcome": "TN",
+        "status": "incomplete_data",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-00",
+        "seed": 9600,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-01",
+        "seed": 9601,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-02",
+        "seed": 9602,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-03",
+        "seed": 9603,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-04",
+        "seed": 9604,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-05",
+        "seed": 9605,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-06",
+        "seed": 9606,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-07",
+        "seed": 9607,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-08",
+        "seed": 9608,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-09",
+        "seed": 9609,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-10",
+        "seed": 9610,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-11",
+        "seed": 9611,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-12",
+        "seed": 9612,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-13",
+        "seed": 9613,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-14",
+        "seed": 9614,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-15",
+        "seed": 9615,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-16",
+        "seed": 9616,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-17",
+        "seed": 9617,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "TN",
+        "status": "no_pattern",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-18",
+        "seed": 9618,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      },
+      {
+        "id": "evaluation-legitimate_overnight_consumption-19",
+        "seed": 9619,
+        "family": "legitimate_overnight_consumption",
+        "positive": false,
+        "outcome": "FP",
+        "status": "possible_loss",
+        "delay_hours": null,
+        "evaluation_cutoff": "2026-03-29T07:00:00+05:30"
+      }
+    ]
+  }
+}

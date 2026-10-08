@@ -1,0 +1,26 @@
+# Interview preparation
+
+## Explain it in one minute
+
+The browser uploads hourly water consumption. FastAPI validates every row, merges it atomically into storage, and calls ordinary Python functions for the detector and maintenance workflow. Each building is compared with its own past at the same overnight hours. An alert explains the arithmetic. The supervisor records an investigation and repair. Later readings are compared against clean pre-incident history, with coverage shown explicitly.
+
+React handles the dashboard; SQLite makes local use simple. AWS SAM packages the same API for Python Lambda. Mangum translates API Gateway events to FastAPI requests. A DynamoDB adapter is prepared for hosted use, while a separate SAM local configuration exercises the Lambda handler with temporary SQLite. Cloud deployment is not verified.
+
+## Ten likely technical questions
+
+1. **Why use a median baseline?** Same-building/hour comparisons account for buildings with different ordinary consumption. A median is less sensitive to isolated historical spikes than a mean. It is understandable without training. It still fails when occupancy, schedules or long-running losses change the baseline.
+2. **What triggers an alert?** At least three consecutive available hours between 00:00 and 06:00 Asia/Kolkata must exceed both twice that hour's historical median and median + 50 L. Each hour requires at least seven earlier samples in a 28-day lookback. The latest eligible night is checked, not every hour in real time.
+3. **How do you prevent future-data leakage?** A reading becomes visible only when its whole interval ends by the cutoff. The evaluated night's baseline uses earlier timestamps, and replay cannot exceed its unlocked stage. Comparison uses incident/event history visible at the evaluation time. Tests exercise these boundaries; the benchmark also poisons future readings and checks unchanged predictions.
+4. **What happens when readings are missing?** Missing is not zero. A gap breaks a consecutive high run. The UI reports incomplete data or insufficient history. Repair comparison requires all 18 matched hours; it does not extrapolate an incomplete total.
+5. **Why is the evaluation not proof of accuracy?** Causes are assigned by the generator; five families and baseline levels do not represent hostel diversity. Forty tuning scenarios choose only the fixed comparator threshold. On 100 separate scenarios, LeakLens gets 20 TP, 10 FP, 40 TN and 30 FN. The comparator has higher recall/F1. A real study needs independent labels and operational context.
+6. **How are uploads atomic and idempotent?** SQLite wraps merging in a transaction. Equal building/timestamp/value repeats are ignored; conflicts roll back the request. Hosted sessions are bounded compressed DynamoDB items; one conditional replacement is the commit. Size checks precede writing, so no batch partially publishes an upload.
+7. **How do you prevent concurrent lost updates or duplicate incidents?** SQLite uses an immediate transaction and a unique active-incident constraint. DynamoDB uses a strongly consistent read and a revision-conditioned PutItem. A concurrent loser receives 409. Repeated alerts link to the same episode; a new recurrence requires an intervening complete normal night after repair. Note retries are not automatically idempotent, so clients do not silently retry mutations.
+8. **Are hosted sessions authentication?** They are temporary isolation, not user identity. The server issues a random 256-bit bearer token, stores only its hash in the key, and the browser uses sessionStorage. Anyone holding it has access. Expiry is enforced at 24 hours; DynamoDB TTL removes data asynchronously. Duplicated tabs may share a credential. No production auth claim is made.
+9. **Does a positive comparison prove savings?** No. It subtracts observed liters from historical expected liters across matched hours, excluding known incidents from reference periods. Occupancy or schedules can explain a difference. Repaired is a human-recorded status, independent of the result. Increased or unchanged use and Awaiting data are valid outcomes.
+10. **What has AWS actually done?** SAM declares the deployable API/Lambda/DynamoDB/logging resources, validates the template, builds a Linux Python 3.12 package, and runs the Lambda handler through local API emulation. [VERIFICATION.md](VERIFICATION.md) records execution results. Moto and SAM local are not deployed AWS. Hosted IAM/CORS/TTL behavior still needs cloud verification. Organizers must confirm eligibility.
+
+## Tradeoffs to acknowledge
+
+A bounded whole-session document simplifies atomicity but rewrites data on each mutation and cannot scale to large archives. A warm local container's `/tmp` data is disposable, not production persistence. Thresholds favor sustained evidence and miss slow small losses. Overnight legitimate activity needs human investigation. Real users and measured impact have not been studied.
+
+Say “possible water loss,” “simulated scenario,” “estimated consumption reduction against baseline,” and “local Lambda/API emulation.” Avoid claims of confirmed leaks, field savings, cloud hosting or prize eligibility without evidence. Disclose Codex assistance and explain the code yourself; do not invent field interviews or work history.

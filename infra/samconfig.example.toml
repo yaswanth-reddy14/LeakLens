@@ -1,0 +1,12 @@
+version = 0.1
+[default.build.parameters]
+template_file = "infra/template.yaml"
+use_container = true
+[default.deploy.parameters]
+stack_name = "leaklens-demo"
+profile = "leaklens"
+region = "ap-southeast-2"
+resolve_s3 = true
+capabilities = "CAPABILITY_IAM"
+confirm_changeset = true
+parameter_overrides = "FrontendOrigin=https://demo.d2gicx0vj4suvu.amplifyapp.com"

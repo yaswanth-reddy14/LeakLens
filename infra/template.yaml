@@ -1,0 +1,135 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: LeakLens temporary demo - HTTP API, Lambda and isolated DynamoDB sessions
+Metadata:
+  AWSToolsMetrics:
+    AWSAgentToolkit: aws-cloudformation@3
+Parameters:
+  FrontendOrigin:
+    Type: String
+    Description: Exact HTTPS Amplify origin, no trailing slash. Use https://example.invalid until assigned.
+    AllowedPattern: '^https://[a-zA-Z0-9.-]+$'
+Resources:
+  SessionsTable:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Delete
+    UpdateReplacePolicy: Delete
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+      SSESpecification:
+        SSEEnabled: true
+      TimeToLiveSpecification:
+        AttributeName: expires_at
+        Enabled: true
+  FunctionLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub '/aws/lambda/${AWS::StackName}-api'
+      RetentionInDays: 7
+  ApiLogs:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      RetentionInDays: 7
+  BackendRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: SessionReadWrite
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: [dynamodb:GetItem, dynamodb:PutItem]
+                Resource: !GetAtt SessionsTable.Arn
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents]
+                Resource: !GetAtt FunctionLogs.Arn
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: $default
+      DefinitionBody:
+        openapi: '3.0.1'
+        info:
+          title: LeakLens
+          version: '1.0'
+        paths: {}
+      CorsConfiguration:
+        AllowOrigins: [!Ref FrontendOrigin]
+        AllowMethods: [GET, POST, OPTIONS]
+        AllowHeaders: [Authorization, Content-Type]
+        MaxAge: 300
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 10
+        ThrottlingRateLimit: 5
+      RouteSettings:
+        'POST /api/sessions':
+          ThrottlingBurstLimit: 2
+          ThrottlingRateLimit: 1
+      AccessLogSettings:
+        DestinationArn: !GetAtt ApiLogs.Arn
+        # No headers, query strings, URL paths, request bodies or credentials.
+        Format: '{"requestId":"$context.requestId","route":"$context.routeKey","status":"$context.status","latency":"$context.responseLatency"}'
+  BackendFunction:
+    Type: AWS::Serverless::Function
+    Metadata:
+      com.aws.cloudformation.Context:
+        why: Share account concurrency; reservation rejected by the demo account's unreserved concurrency minimum.
+        must:
+          - No dedicated function concurrency cap; preserve API throttling and restricted runtime IAM.
+    Properties:
+      FunctionName: !Sub '${AWS::StackName}-api'
+      CodeUri: .lambda-src/
+      Handler: backend.lambda_handler.handler
+      Runtime: python3.12
+      Architectures: [x86_64]
+      MemorySize: 512
+      Timeout: 20
+      Role: !GetAtt BackendRole.Arn
+      Environment:
+        Variables:
+          LEAKLENS_STORAGE: dynamodb
+          LEAKLENS_TABLE_NAME: !Ref SessionsTable
+          LEAKLENS_FRONTEND_ORIGIN: !Ref FrontendOrigin
+      Events:
+        Session:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /api/sessions
+            Method: POST
+            PayloadFormatVersion: '2.0'
+            TimeoutInMillis: 22000
+        Proxy:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+            PayloadFormatVersion: '2.0'
+            TimeoutInMillis: 22000
+Outputs:
+  ApiUrl:
+    Description: Set VITE_API_BASE_URL to this, without /api or a trailing slash
+    Value: !Sub 'https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}'
+  TableName:
+    Value: !Ref SessionsTable
+  FunctionName:
+    Value: !Ref BackendFunction
+  FunctionLogGroup:
+    Value: !Ref FunctionLogs
+  ApiLogGroup:
+    Value: !Ref ApiLogs

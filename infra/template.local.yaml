@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: LOCAL ONLY - warm-container temporary SQLite demonstration, never deploy
+Resources:
+  LocalBackend:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ../.aws-sam/build/BackendFunction/
+      Handler: backend.lambda_handler.handler
+      Runtime: python3.12
+      Architectures: [x86_64]
+      Timeout: 20
+      MemorySize: 512
+      Environment:
+        Variables:
+          LEAKLENS_STORAGE: sqlite
+          LEAKLENS_SAM_LOCAL_DEMO: 'true'
+          LEAKLENS_DB_PATH: /tmp/leaklens-local/demo.sqlite3
+      Events:
+        Proxy:
+          Type: HttpApi
+          Properties:
+            Path: /{proxy+}
+            Method: ANY
+            PayloadFormatVersion: '2.0'
